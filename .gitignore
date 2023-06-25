@@ -15,4 +15,16 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
+
+!application/*/.htaccess
+
+composer.lock
+
 /vendor/
+
+
+
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
