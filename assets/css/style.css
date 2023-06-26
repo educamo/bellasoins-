@@ -1,7 +1,82 @@
+/* body */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* HEADER */
+
 header div.text-info-cabecera a {
     font-size: 12px;
     line-height: 38px;
     letter-spacing: 0.104em;
     font-weight: 600;
     font-style: italic;
+}
+
+
+/* SECTION SLOGAN */
+
+.slogan {
+    margin-top: 1%;
+    background-color: rgba(255, 192, 203, 0.555);
+    text-align: center;
+    padding: 15px;
+}
+
+.slogan h1 {
+    font-size: 36px;
+    color: rgb(14, 136, 141);
+}
+
+.slogan p {
+    font-size: 24px;
+    color: rgb(14, 136, 141);
+}
+
+.slogan img {
+    margin-top: -10%;
+    width: 320px;
+    height: auto;
+}
+
+.slogan .boton-citas {
+    display: inline-block;
+    margin-top: 25pX;
+    padding: 10px 20px;
+    background-color: rgb(47, 117, 129);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 2px solid rgb(47, 117, 129);
+}
+
+.slogan .boton-citas:hover {
+    background-color: transparent;
+    color: rgb(0, 59, 70);
+    font-weight: bold;
+}
+
+
+/* SECTION SERVICES */
+
+#services h1 {
+    margin: 5rem auto;
+}
+
+#placeholder-img {
+    height: 240px !important;
+}
+
+
+/* Estilos para pantallas pequeñas en vertical */
+
+@media (max-width: 600px) and (orientation: portrait) {
+    .slogan {
+        margin-top: 10%;
+    }
+    .slogan img {
+        margin-top: 5px;
+        width: 170px;
+    }
 }
