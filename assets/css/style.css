@@ -1,9 +1,14 @@
+/* *********************** ESTILOS CSS GENERALES ******************** */
+
+
 /* body */
 
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
     padding: 0px;
+    bottom: 0px;
+    background-color: #f0f0f0;
 }
 
 
@@ -17,11 +22,78 @@ header div.text-info-cabecera a {
     font-style: italic;
 }
 
+.navbar .navbar-nav .nav-link {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 13px;
+    text-decoration: none;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: "open-sans";
+    transition: 0.3s ease;
+    padding: 10px 10px;
+    margin: 0 5px;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link .dropdown-item:hover {
+    padding: 10px 10px;
+    background: rgb(252, 221, 221);
+    border-radius: 2%;
+    transform: scale(1.1);
+    font-weight: 200;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar-text a {
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgb(50, 143, 160);
+    color: rgb(252, 221, 221);
+    text-decoration: none;
+    font-family: "open-sans";
+    transition: 0.3s ease;
+    padding: 10px 10px;
+    margin: 0 5px;
+    border-radius: 5%;
+    width: 0.1px;
+}
+
+.navbar-text a:hover {
+    color: rgb(197, 0, 148);
+    background-color: rgb(166, 217, 226);
+    font-weight: 300;
+    border-radius: 10%;
+    transform: scale(1.2);
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 10%;
+    margin-bottom: 0% !important;
+    width: 100%;
+    height: 150px;
+    color: rgb(230, 230, 230);
+}
+
+.footer {
+    min-height: 150px;
+}
+
+
+/* **************** ESTILOS CSS LANDINGPAGE O WELCOME ************** */
+
 
 /* SECTION HERO */
 
 .hero {
-    padding-bottom: 5%;
+    padding-bottom: 10%;
 }
 
 .hero .boton-citas {
@@ -32,6 +104,7 @@ header div.text-info-cabecera a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     border: 2px solid rgb(47, 117, 129);
+    transition: color 0.3s, background-color 0.3s;
 }
 
 .hero .boton-citas:hover {
@@ -68,6 +141,19 @@ header div.text-info-cabecera a {
 }
 
 
+/* Selecciona todas las imágenes dentro de elementos con la clase .img-zoom-container */
+
+.img-zoom-container img {
+    /* Define una transición suave para el cambio de tamaño */
+    transition: transform 0.3s;
+}
+
+.img-zoom-container img:hover {
+    /* Aumenta el tamaño de la imagen en un 20% */
+    transform: scale(1.2);
+}
+
+
 /* SECTION SERVICES */
 
 #services h1 {
@@ -89,27 +175,8 @@ header div.text-info-cabecera a {
 
 .gallery div.bg-color {
     background-color: #2a595abe;
-    padding: 300px 0px;
-}
-
-.gallery-relative {
-    margin: 5% 0px 5% 0px;
-}
-
-.gallery-relative img.position-img1 {
-    bottom: -90px;
-    left: 40%;
-    width: 400px;
-    height: 500px;
-    margin-left: 52px;
-}
-
-.gallery-relative img.position-img2 {
-    top: -90px;
-    left: 20%;
-    width: 400px;
-    height: 500px;
-    z-index: 1;
+    padding-bottom: 100px;
+    padding-top: 100px;
 }
 
 .gallery h2 {
@@ -119,12 +186,40 @@ header div.text-info-cabecera a {
 .gallery div.caption {
     display: none;
     position: absolute;
-    bottom: 1px;
-    right: 1px;
+    top: 18%;
+    bottom: 0;
+    text-align: center;
+    color: rgb(250, 205, 236);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1 !important;
+    margin-left: 20px;
+    border: rgb(255, 220, 220) solid 3px;
+    border-radius: 350% 0% 0% 0%;
+    width: 15rem;
+    height: 300px;
+    padding-top: 6rem;
+    padding-left: 3.5rem;
+    padding-right: 2rem;
+    /* Define la transición para la opacidad */
+    transition: opacity 3s ease-in;
+    /* Define la opacidad normal */
+    opacity: 0, 1;
+    /* transformación */
+    transition: transform 3s;
+    transform: scale(0.1);
+}
+
+.gallery img {
+    position: relative;
+    z-index: 0;
 }
 
 .gallery img:hover+.caption {
+    /* Define la opacidad al pasar el mouse */
+    opacity: 1;
     display: block;
+    /* define la transformacion al pasar el mouse */
+    transform: scale(1);
 }
 
 .carousel-control-prev {
@@ -139,6 +234,44 @@ header div.text-info-cabecera a {
 .carousel-control-next {
     width: 4%;
     right: 12px;
+}
+
+.gallery-relative {
+    margin: 5% 0px 5% 0px;
+}
+
+.gallery2 {
+    padding-top: 20rem;
+    padding-bottom: 25rem;
+}
+
+.gallery-relative img.position-img1 {
+    bottom: -90px;
+    left: 40%;
+    width: 400px;
+    height: 500px;
+    border-radius: 30% 2%;
+}
+
+.gallery-relative img.position-img2 {
+    top: -90px;
+    left: 20%;
+    width: 400px;
+    height: 500px;
+    border-radius: 2% 25%;
+    z-index: 1;
+}
+
+.gallery-relative div.description1 {
+    bottom: 10rem;
+    padding: 0rem 40rem 5rem 2rem;
+    margin: 0rem 40rem -10rem 0rem;
+}
+
+.gallery-relative div.description2 {
+    bottom: -195px;
+    padding: 0rem 0rem 0rem 2rem;
+    margin: 0rem 5rem -5rem 41rem;
 }
 
 
@@ -158,21 +291,48 @@ header div.text-info-cabecera a {
 }
 
 
-/* FOOTER */
+/* ******************** ESTILO CSS DEL FORM APPOINTMENTS ****************** */
 
-footer {
-    margin-top: 100%;
-    margin-bottom: 0% !important;
-    /* height: 150px; */
-    color: rgb(230, 230, 230);
+.container-form {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(255, 220, 220);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-size: cover;
 }
 
-.footer {
-    min-height: 150px;
+.img {
+    border: #ffffff solid 2px;
+    width: 50%;
+    height: auto;
+    border-radius: 4%;
+    margin-left: 20%;
+}
+
+.img img {
+    margin-left: 15%;
+    margin-top: 5%;
+    border-radius: 5%;
+    padding: 2px;
+    box-shadow: 15px 20px 10px #2f7581;
+}
+
+.form-group {
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: rgb(47, 117, 129);
 }
 
 
-/* Estilos para pantallas pequeñas en vertical */
+/* ************************ ESTILOS CSS PARA PANTALLAS PEQUEÑAS EN VERTICAL ************************** */
 
 @media (max-width: 600px) and (orientation: portrait) {
     /* SLOGAN */
@@ -191,6 +351,13 @@ footer {
         width: 170px;
     }
     /* GALLERY */
+    .gallery {
+        padding-top: 80px;
+        padding-bottom: 15px;
+    }
+    .bg-color {
+        display: none;
+    }
     .gallery-relative img.position-img1 {
         bottom: 10px;
         left: 25%;
@@ -198,9 +365,19 @@ footer {
         height: 250px;
     }
     .gallery-relative img.position-img2 {
-        top: 10px;
+        top: 227px;
         left: 25%;
         width: 200px;
         height: 250px;
+    }
+    .gallery-relative div.description1 {
+        bottom: 220px;
+        padding: 2rem;
+        margin: 0rem;
+    }
+    .gallery-relative div.description2 {
+        bottom: -15rem;
+        padding: 5px;
+        margin: 0px;
     }
 }

@@ -1,68 +1,4 @@
-<?php
-defined('BASEPATH') or exit('No direct script access allowed');
-?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home - Bella Soins Inc</title>
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,300;1,400&display=swap" rel="stylesheet">
-
-	<!-- Bootstrap CSS -->
-	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
-	<link href="<?= base_url('assets//css/bootstrap/bootstrap.min.css') ?>" rel="stylesheet">
-
-	<!-- css personal -->
-	<link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
-	<!-- Font Awesome CSS -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-
-</head>
-
-<body>
-	<!-- CABECERA  -->
-	<header>
-		<!-- nav -->
-		<nav class="navbar p-t-2 fixed-top navbar-expand-lg bg-light">
-			<div class="container-fluid text-center">
-				<a class="navbar-brand" href="#">Navbar</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Features</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Services</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<!-- nav end -->
-		<div class="container-fluid mt-5 text-info-cabecera" style="z-index: 500;">
-			<div class="row">
-				<div class="col-6 ps-3">
-					<a class="link-opacity-25 text-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="tel:+">00000000000</a>
-				</div>
-				<div class="col-6 text-end pe-5">
-					<a href="#" class="link-opacity-25 text-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">en</a>
-				</div>
-			</div>
-		</div>
-	</header>
-	<!-- CABECERA END -->
 
 	<!-- HERO -->
 	<section id="hero" class="container hero">
@@ -78,7 +14,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		</div>
 		<div class="row">
 			<div class="col-md-4 offset-md-8">
-				<a href="#" class="boton-citas">Agenda tu cita</a>
+				<a href="<?= site_url('appointment/') ?>" class="boton-citas">Agenda tu cita</a>
 			</div>
 		</div>
 	</section>
@@ -87,7 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- SECTION SLOGAN -->
 	<section id="slogan" class="container-fluid slogan">
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-4 img-zoom-container">
 				<img src="<?= base_url('assets/img/estetica.jpg') ?>" alt="Una mujer sonriente en una estética" class="img-thumbnail img-fluid rounded mx-auto d-block">
 			</div>
 			<div class="col-md-8">
@@ -101,7 +37,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	<!-- SECTION SERVICES -->
 	<section id="services" class="container mt-4 mb-4">
-		<div class="text-center">
+		<div class="row text-center">
 			<h1>Servicios</h1>
 		</div>
 		<div class="row">
@@ -193,91 +129,102 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	<!-- SECTION GALLERY -->
 	<section id="gallery" class="gallery">
-		<!-- <div class="container-fluid bg-color">
-			<h2 class="text-center mt-4 mb-4 text-white">Image Gallery</h2>
-			<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-				<div class="container">
-					<div class="carousel-inner">
-						<div class="carousel-item active mt-1 mb-1">
-							<div class="row">
-								<div class="col-sm-3">
-									<img src="https://picsum.photos/200/306" class="d-block img-fluid img-thumbnail" title="Esta es una imagen aleatoria" alt="Image">
-									<div class="caption">Esta es una imagen de un paisaje</div>
-								</div>
-								<div class="col-sm-3">
-									<img src="https://picsum.photos/200/307" class="d-block img-fluid img-thumbnail" title="Esta es una imagen aleatoria" alt="Image">
-									<div class="caption">Esta es una imagen de un paisaje</div>
-								</div>
-								<div class="col-sm-3">
-									<img src="https://picsum.photos/200/308" class="d-block img-fluid img-thumbnail" title="Esta es una imagen aleatoria" alt="Image">
-									<div class="caption">Esta es una imagen de un paisaje</div>
-								</div>
-								<div class="col-sm-3">
-									<img src="https://picsum.photos/200/308" class="d-block img-fluid img-thumbnail" title="Esta es una imagen aleatoria" alt="Image">
-									<div class="caption">Esta es una imagen de un paisaje</div>
-								</div>
-							</div>
-						</div>
-						<div class="carousel-item mt-1 mb-1">
-							<div class="row">
-								<div class="col-sm-3">
-									<img src="https://picsum.photos/200/309" class="d-block img-fluid img-thumbnail" title="Esta es una imagen aleatoria" alt="Image">
-									<div class="caption">Esta es una imagen de un paisaje</div>
-								</div>
-								<div class="col-sm-3">
-									<img src="https://picsum.photos/200/301" class="d-block img-fluid img-thumbnail" title="Esta es una imagen aleatoria" alt="Image">
-									<div class="caption">Esta es una imagen de un paisaje</div>
-								</div>
-								<div class="col-sm-3">
-									<img src="https://picsum.photos/200/302" class="d-block img-fluid img-thumbnail" title="Esta es una imagen aleatoria" alt="Image">
-									<div class="caption">Esta es una imagen de un paisaje</div>
-								</div>
-								<div class="col-sm-3">
-									<img src="https://picsum.photos/200/302" class="d-block img-fluid img-thumbnail" title="Esta es una imagen aleatoria" alt="Image">
-									<div class="caption">Esta es una imagen de un paisaje</div>
+		<div class="container-fluid bg-color">
+			<div class="row">
+				<h2 class="text-center mt-4 mb-4 text-white">Image Gallery</h2>
+			</div>
+			<div class="row">
+				<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+					<div class="container">
+						<div class="carousel-inner">
+							<div class="carousel-item active mt-1 mb-1">
+								<div class="row">
+									<div class="col-sm-3">
+										<img src="<?= base_url('assets/img/gallery-image-10-835x1200-original.jpg') ?>" class="img-fluid img-thumbnail" title="Esta es una imagen aleatoria 1" alt="Image 1">
+										<div class="caption">Esta es una imagen 1</div>
+									</div>
+									<div class="col-sm-3">
+										<img src="<?= base_url('assets/img/gallery-image-10-835x1200-original.jpg') ?>" class="img-fluid img-thumbnail" title="Esta es una imagen aleatoria 2" alt="Image 2">
+										<div class="caption">Esta es una imagen 2</div>
+									</div>
+									<div class="col-sm-3">
+										<img src="<?= base_url('assets/img/gallery-image-10-835x1200-original.jpg') ?>" class="img-fluid img-thumbnail" title="Esta es una imagen aleatoria 3" alt="Image 3">
+										<div class="caption">Esta es una imagen 3</div>
+									</div>
+									<div class="col-sm-3">
+										<img src="<?= base_url('assets/img/gallery-image-10-835x1200-original.jpg') ?>" class="img-fluid img-thumbnail" title="Esta es una imagen aleatoria 4" alt="Image 4">
+										<div class="caption">Esta es una imagen 4</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="carousel-item mt-1 mb-1">
-							<div class="row">
-								<div class="col-sm-3">
-									<img src="https://picsum.photos/200/303" class="d-block img-fluid img-thumbnail" title="Esta es una imagen aleatoria" alt="Image">
-									<div class="caption">Esta es una imagen de un paisaje</div>
+							<div class="carousel-item mt-1 mb-1">
+								<div class="row">
+									<div class="col-sm-3">
+										<img src="<?= base_url('assets/img/gallery-image-10-835x1200-original.jpg') ?>" class="img-fluid img-thumbnail" title="Esta es una imagen aleatoria 5" alt="Image 5">
+										<div class="caption">Esta es una imagen 5</div>
+									</div>
+									<div class="col-sm-3">
+										<img src="<?= base_url('assets/img/gallery-image-10-835x1200-original.jpg') ?>" class="img-fluid img-thumbnail" title="Esta es una imagen aleatoria 6" alt="Image 6">
+										<div class="caption">Esta es una imagen 6</div>
+									</div>
+									<div class="col-sm-3">
+										<img src="<?= base_url('assets/img/gallery-image-10-835x1200-original.jpg') ?>" class="img-fluid img-thumbnail" title="Esta es una imagen aleatoria 7" alt="Image 7">
+										<div class="caption">Esta es una imagen 7</div>
+									</div>
+									<div class="col-sm-3">
+										<img src="<?= base_url('assets/img/gallery-image-10-835x1200-original.jpg') ?>" class="img-fluid img-thumbnail" title="Esta es una imagen aleatoria 8" alt="Image 8">
+										<div class="caption">Esta es una imagen 8</div>
+									</div>
 								</div>
-								<div class="col-sm-3">
-									<img src="https://picsum.photos/200/304" class="d-block img-fluid img-thumbnail" title="Esta es una imagen aleatoria" alt="Image">
-									<div class="caption">Esta es una imagen de un paisaje</div>
-								</div>
-								<div class="col-sm-3">
-									<img src="https://picsum.photos/200/305" class="d-block img-fluid img-thumbnail" title="Esta es una imagen aleatoria" alt="Image">
-									<div class="caption">Esta es una imagen de un paisaje</div>
-								</div>
-								<div class="col-sm-3">
-									<img src="https://picsum.photos/200/305" class="d-block img-fluid img-thumbnail" title="Esta es una imagen aleatoria" alt="Image">
-									<div class="caption">Esta es una imagen de un paisaje</div>
+							</div>
+							<div class="carousel-item mt-1 mb-1">
+								<div class="row">
+									<div class="col-sm-3">
+										<img src="<?= base_url('assets/img/gallery-image-10-835x1200-original.jpg') ?>" class="img-fluid img-thumbnail" title="Esta es una imagen aleatoria 9" alt="Image 9">
+										<div class="caption">Esta es una imagen 9</div>
+									</div>
+									<div class="col-sm-3">
+										<img src="<?= base_url('assets/img/gallery-image-10-835x1200-original.jpg') ?>" class="img-fluid img-thumbnail" title="Esta es una imagen aleatoria 10" alt="Image 10">
+										<div class="caption">Esta es una imagen 10</div>
+									</div>
+									<div class="col-sm-3">
+										<img src="<?= base_url('assets/img/gallery-image-10-835x1200-original.jpg') ?>" class="img-fluid img-thumbnail" title="Esta es una imagen aleatoria 11" alt="Image 11">
+										<div class="caption">Esta es una imagen 11</div>
+									</div>
+									<div class="col-sm-3">
+										<img src="<?= base_url('assets/img/gallery-image-10-835x1200-original.jpg') ?>" class="img-fluid img-thumbnail" title="Esta es una imagen aleatoria 12" alt="Image 12">
+										<div class="caption">Esta es una imagen 12</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</button>
 				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</button>
 			</div>
 
-		</div> -->
+		</div>
 
 
-		<div class="container-fluid bg-color">
+		<div class="container-fluid gallery2">
 			<div class="row">
 				<div class="position-relative gallery-relative">
-					<img src="https://picsum.photos/200/305" class="position-absolute img-thumbnail img-fluid position-img1" alt="Imagen 1">
-					<img src="https://picsum.photos/200/306" class="position-absolute img-thumbnail img-fluid position-img2" alt="Imagen 2">
+					<div class="container position-absolute description1">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae necessitatibus possimus magnam sapiente fugiat. Laudantium est similique delectus quibusdam inventore ratione odio repudiandae iusto, maxime eveniet omnis officia rerum. Magni.</p>
+					</div>
+					<img src="<?= base_url('assets/img/gallery-image-10-835x1200-original.jpg') ?>" class="position-absolute img-thumbnail img-fluid position-img1" alt="Imagen 1">
+					<img src="<?= base_url('assets/img/gallery-image-10-835x1200-original.jpg') ?>" class="position-absolute img-thumbnail img-fluid position-img2" alt="Imagen 2">
+					<div class="position-absolute description2">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae necessitatibus possimus magnam sapiente fugiat. Laudantium est similique delectus quibusdam inventore ratione odio repudiandae iusto, maxime eveniet omnis officia rerum. Magni.</p>
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -289,7 +236,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- SECTION LOCATION -->
 	<div class="container p-lg-5 contenedor-locacion">
 		<div class="row">
-			<div class="col-md-6 text-start location">
+			<div class="col-md-6 text-start location content">
 				<h1 class="text-center mb-4">Información de locación</h1>
 				<p><i class="fa fa-mobile fa-2x me-2"></i> <span class="tex-loaction">+58 241-1234567</span></p>
 				<p><i class="fa fa-mail-bulk fa-2x me-2"></i> <span class="tex-loaction">ejemplo@correo.com</span></p>
@@ -303,42 +250,3 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	<!-- LOCATION END -->
 
-	<!-- FOOTER -->
-	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-dark footer">
-
-		<div class="col-md-4 d-flex align-items-center ms-4">
-			<a href="#" class="mb-3 me-2 mb-md-0 text-light text-decoration-none lh-1">
-				<i class="fab fa-bootstrap"></i>
-			</a>
-			<span class="mb-3 mb-md-0 text-white">© <span id="year"></span> Bella Soins, Inc</span>
-		</div>
-
-		<ul class="nav col-md-4 justify-content-end list-unstyled d-flex me-4">
-			<li class="ms-3"><a class="text-white" href="#"><i class="fab fa-twitter"></i></a></li>
-			<li class="ms-3"><a class="text-white" href="#"><i class="fab fa-instagram"></i></a></li>
-			<li class="ms-3"><a class="text-white" href="#"><i class="fab fa-facebook"></i></a></li>
-		</ul>
-		<div class="container">
-			<div class="col-md-12">
-				<hr>
-			</div>
-			<div class="col-md-12 text-center">
-				<p>Design by C. Eduardo Carrasco</p>
-			</div>
-		</div>
-	</footer>
-	<!-- FOOTER END -->
-
-
-
-	<!-- Popper JS -->
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-	<!-- <script src="<?= base_url('assets/js/bootstrap/popper.min.js') ?>"></script> -->
-	<!-- Bootstrap JS -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
-	<!-- <script src="<?= 'base_url(assets/js/bootstrap/bootstrap.min.js)' ?>"></script> -->
-	<!-- js custom -->
-	<script src="<?= base_url('assets/js/welcome.js') ?>"></script>
-</body>
-
-</html>
