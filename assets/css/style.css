@@ -45,6 +45,10 @@ header div.text-info-cabecera a {
     font-weight: 200;
 }
 
+.nav-item.dropdown .dropdown-menu {
+    padding: 10px;
+}
+
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
 }
@@ -329,6 +333,14 @@ footer {
     border-radius: 5px;
     color: #ffffff;
     background-color: rgb(47, 117, 129);
+}
+
+
+/* **************************** ESTILOS CSS PARA SERVICE_SHOW ********************** */
+
+.category-img {
+    width: 250px;
+    height: auto;
 }
 
 

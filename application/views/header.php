@@ -45,9 +45,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 Services
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item nav-link" href="#">Action</a></li>
-                                <li><a class="dropdown-item nav-link" href="#">Another action</a></li>
-                                <li><a class="dropdown-item nav-link" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item nav-link" href="<?= site_url('service/show/1') ?>">Action</a></li>
+                                <li><a class="dropdown-item nav-link" href="<?= site_url('service') ?>">Another action</a></li>
+                                <li><a class="dropdown-item nav-link" href="<?= site_url('service') ?>">Something else here</a></li>
                             </ul>
                         </li>
 

@@ -238,9 +238,9 @@
 		<div class="row">
 			<div class="col-md-6 text-start location content">
 				<h1 class="text-center mb-4">Información de locación</h1>
-				<p><i class="fa fa-mobile fa-2x me-2"></i> <span class="tex-loaction">+58 241-1234567</span></p>
-				<p><i class="fa fa-mail-bulk fa-2x me-2"></i> <span class="tex-loaction">ejemplo@correo.com</span></p>
-				<p> <i class="fa fa-map-marked-alt fa-2x me-2"></i> <span class="tex-loaction">Dirección: Calle 123, San José, Estado Carabobo, Venezuela</span></p>
+				<p><i class="fa fa-mobile fa-2x me-2 icon-link"></i> <span class="tex-loaction">+58 241-1234567</span></p>
+				<p><i class="fa fa-mail-bulk fa-2x me-2 icon-link"></i> <span class="tex-loaction">ejemplo@correo.com</span></p>
+				<p> <i class="fa fa-map-marked-alt fa-2x me-2 icon-link"></i> <span class="tex-loaction">Dirección: Calle 123, San José, Estado Carabobo, Venezuela</span></p>
 			</div>
 			<div class="col-md-6 text-center">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.624895948252!2d-68.01698368520457!3d10.25323519267617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e805c5c9b6a8a7b%3A0x9c6a5e7e6f8e4b9c!2sSan%20Jos%C3%A9%2C%20Carabobo!5e0!3m2!1ses-419!2sve!4v1638471959007!5m2!1ses-419!2sve" width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
